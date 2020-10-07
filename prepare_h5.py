@@ -29,8 +29,8 @@ def frame_inference(wavpath, model, use_cuda=True, pad_zero=False, sig=None):
     # return sequence
 
 
-def create_vcc_audio_h5(wav_root_path="vcc2020_training", h5_audio_path="VCC_audio.h5"):
-    spks = ['SEF1', 'SEF2', 'SEM1', 'SEM2', 'TEF1', 'TEF2', 'TEM1', 'TEM2', 'TFF1', 'TFM1', 'TGF1', 'TGM1', 'TMF1', 'TMM1']
+def create_vcc_audio_h5(wav_root_path="training", h5_audio_path="VCC_audio.h5"):
+    spks = ['chinese', 'english']
     with h5py.File(h5_audio_path, "w") as h5:
         for i, spk in tqdm(enumerate(spks)):
             h5.create_group(str(i))
