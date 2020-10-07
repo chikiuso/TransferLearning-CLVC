@@ -31,7 +31,7 @@ parser.add_argument("--sampling_rate", type=int, default=24000)
 parser.add_argument("--cuda", type=bool, default=True)
 parser.add_argument("--is_fp16", type=bool, default=True)
 parser.add_argument('-f', '--h5_feature_path', type=str, default="VCC_features.h5")
-parser.add_argument('-vcc', '--vcc_root_path', type=str, default="vcc2020_evaluation")
+parser.add_argument('-vcc', '--vcc_root_path', type=str, default="testing")
 parser.add_argument("-d", "--denoiser_strength", type=float, default=0.08, help='Removes model bias.')
 args = parser.parse_args()
 os.makedirs(args.outputs, exist_ok=True)
@@ -62,7 +62,7 @@ if args.denoiser_strength > 0:
 
 h5 = h5py.File(args.h5_feature_path, "r")
 wav_root_path = args.vcc_root_path
-spks = ['SEF1', 'SEF2', 'SEM1', 'SEM2', 'TEF1', 'TEF2', 'TEM1', 'TEM2', 'TFF1', 'TFM1', 'TGF1', 'TGM1', 'TMF1', 'TMM1']
+spks = ['chinese', 'english']
 for sid in range(0, 4):
 	source_name = spks[sid]
 	source_folder = os.path.join(wav_root_path, source_name)
