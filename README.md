@@ -19,6 +19,8 @@ For more details, please refer to our paper.
 - tensorboardX
 - apex
 
+pip3 install numba==0.50.1
+
 
 ## Preprocessing
 1. Clone this repository.  
