@@ -19,8 +19,9 @@ For more details, please refer to our paper.
 - tensorboardX
 - apex
 
-apt install libsndfile1
-pip3 install numba==0.50.1 torch==1.1 librosa h5py scipy tensorboardX apex
+- apt install libsndfile1
+
+- pip3 install numba==0.48 torch==1.1 librosa h5py scipy tensorboardX apex
 
 
 ## Preprocessing
