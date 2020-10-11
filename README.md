@@ -20,6 +20,8 @@ For more details, please refer to our paper.
 - apex
 
 - apt install libsndfile1
+- apt-get install libsamplerate0 libsamplerate0-dev
+- pip3  install scikits.samplerate
 
 - pip3 install numba==0.48 torch==1.1 librosa h5py scipy tensorboardX apex
 
